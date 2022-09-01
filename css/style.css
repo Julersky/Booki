@@ -1,17 +1,26 @@
 /* Style général */
-*[onclick]{
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*[onclick] {
     cursor: pointer;
 }
-    
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 a {
     text-decoration: none;
+    color: black;
 }
-header{
+
+header {
     width: 95%;
     margin: auto;
 }
-main{
+
+main {
     width: 95%;
     margin: auto;
 }
@@ -24,33 +33,41 @@ body {
     overflow-x: auto;
 
 }
-h1, h2{
+
+h1,
+h2 {
     font-size: 25px;
     font-weight: bold;
 
 }
-h3{
-    font-size: 18px;
+
+h3 {
+    font-size: 16px;
     font-weight: 700;
 }
 
+.populaire p, .hebergement p {
+    font-size: 15px;
+}
 /*HEADER*/
 
 header{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+
 
 }
-#card-logo{
+
+#card-logo {
     width: 150px;
     height: 80px;
     object-fit: cover;
 }
-#logo{
+
+#logo {
     height: fit-content;
 }
-header #logo img{
+
+header #logo img {
     width: 100%;
 }
 
@@ -77,12 +94,12 @@ header nav ul {
 
 .button-entete {
     color: black;
-    padding:  25px 15px 0px 15px;
+    padding: 25px 15px 0px 15px;
 }
 
 .button-entete:hover {
     color: #0065FC;
-    border-top: 2px solid #0065FC;
+    border-top: 5px solid #0065FC;
 }
 
 /*MAIN*/
@@ -91,13 +108,8 @@ header nav ul {
 /*SEARCH BAR*/
 .rechercher {
     display: flex;
-    height: 100%;
     margin-bottom: 35px;
 
-    /* height: 100px;
-    align-items: center;
-    box-sizing: border-box;
-    margin-bottom: 10px; */
 }
 
 .rechercher i {
@@ -112,8 +124,6 @@ header nav ul {
 }
 
 .rechercher input {
-    width: 20%;
-    background-color: transparent;
     border-top: 2px solid #F2F2F2;
     border-bottom: 2px solid #F2F2F2;
     border-left: none;
@@ -129,8 +139,7 @@ header nav ul {
 }
 
 #button-recherche-desk {
-    height: 60px;
-    width: 12%;
+
     min-width: fit-content;
     padding: 0px 20px;
     border: none;
@@ -221,17 +230,20 @@ header nav ul {
     margin-bottom: 10px;
 }
 
+.filtres li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
 
 
 .filtres li:hover {
     background-color: #DEEBFF;
     color: #0065FC;
     font-weight: 500;
-    border: 2.5px solid #DEEBFF;
-  
-
-
-
+    border: 2px solid #DEEBFF;
 }
 
 
@@ -241,12 +253,14 @@ header nav ul {
     align-items: center;
     color: #0065FC;
     background-color: #DEEBFF;
-    height: 55px;
-    width: 55px;
+    height: 50px;
+    width: 50px;
     border-radius: 30px;
     margin-right: 10px;
     font-size: 20px;
-    margin-left: -5px;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    margin-left: -3px;
 }
 
 /*INFO*/
@@ -275,13 +289,8 @@ header nav ul {
 /*CONTAINER*/
 .container {
     display: flex;
-    border: transparent;
-    height: auto;
-    flex-direction: row;
-    column-gap: 4%;
-    margin-top: 50px;
-    margin-bottom: 100px;
-    border:transparent
+    justify-content: space-between;
+    margin: 2% 0;
 }
 
 /*HEBERGEMENT*/
@@ -289,30 +298,22 @@ header nav ul {
 .hebergements {
     box-sizing: border-box;
     padding: 20px;
-    width: 64%;
-    height: 700px;
-    border: transparent;
+    width: 65%;
     background-color: #F2F2F2;
     border-radius: 25px;
 }
 
 .hebergement {
-    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    overflow-y: scroll;
     justify-content: space-between;
-    width: fit-content;
-    height: 80%;
-    border:transparent;
-    border-radius: 25px;
+    margin-bottom: 2%;
+
 }
 
 #titre-heb {
-    border: transparent;
     font-weight: 800;
-    
+
 }
 
 .heb-card {
@@ -321,45 +322,31 @@ header nav ul {
     transition: 0.3s;
     display: flex;
     flex-direction: column;
-    height: 40%;
     width: 32%;
-    min-width:fit-content;
     border: 1px solid white;
     background-color: white;
     border-radius: 25px;
     padding: .5%;
     margin: 15px 0px;
-
+    color: black;
 }
 
 .heb-image {
     width: 100%;
     height: 60%;
-    border: transparent;
 }
 
 .heb-image-image {
     border-radius: 25px 25px 0px 0px;
     max-width: 100%;
     width: 100%;
-    height: 100%;
+    height: 130px;
     object-fit: cover;
     object-position: center;
 }
 
 .heb-legende {
-    box-sizing: content-box;
-    display: flex;
-    white-space: nowrap;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 90%;
-    height: 40%;
-    border: transparent;
-    background-color: white;
     margin-left: 5px;
-    border-radius: 25px;
 }
 
 .heb-legende-note {
@@ -369,7 +356,6 @@ header nav ul {
     align-items: center;
     height: 35%;
     width: 100px;
-    border: transparent;
     margin: 5px 0px 5px;
 }
 
@@ -377,7 +363,6 @@ header nav ul {
     margin-top: 25px;
     font-size: 20px;
     font-weight: 700;
-    border: transparent;
 }
 
 
@@ -393,27 +378,32 @@ header nav ul {
     height: 20%;
 }
 
+.afficher-plus {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.afficher-plus:hover {
+    color: #0065FC;
+    text-decoration: underline;
+}
+
 /*POPULAIRES*/
 
 .populaires {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     padding: 20px;
-    width: 32%;
-    border: transparent;
+    width: 28%;
     background-color: #F2F2F2;
     border-radius: 25px;
 }
 
 #titre-pop {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     height: 10%;
     width: 100%;
     font-weight: 800;
-    border: transparent;
 
 }
 
@@ -421,9 +411,6 @@ header nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    border: transparent;
     border-radius: 25px;
 }
 
@@ -432,12 +419,10 @@ header nav ul {
     box-shadow: 4px 4px 3px 0 #e8e6e6;
     transition: 0.3s;
     display: flex;
-    flex-direction: row;
     height: 140px;
     width: 99%;
     min-width: fit-content;
     margin: 15px 0px;
-    border: transparent;
     border-radius: 25px;
     background-color: white;
     padding: 1.5%;
@@ -446,7 +431,6 @@ header nav ul {
 .pop-image {
     width: 40%;
     height: 100%;
-    border: transparent;
 
 }
 
@@ -463,7 +447,6 @@ header nav ul {
     box-sizing: content-box;
     width: 60%;
     height: 95%;
-    border: transparent;
     background-color: white;
     margin-left: 20px;
 }
@@ -475,7 +458,6 @@ header nav ul {
     align-items: baseline;
     width: 100px;
     height: 10%;
-    border: transparent;
     margin: 0px;
 
 }
@@ -497,18 +479,23 @@ header nav ul {
     align-items: center;
     font-size: 20px;
 }
-.note-pleine .note-vide{
+
+.note-pleine, .note-vide {
+    display: flex;
+    flex-wrap: nowrap;
     width: 100%;
 }
+
 .note-vide i {
     color: #D9D9D9;
     font-size: 13px;
+    margin: 2px;
 }
 
 .note-pleine i {
     color: #0065FC;
     font-size: 13px;
-    margin: 0px;
+    margin: 2px;
 }
 
 /*ACTIVITES*/
@@ -516,12 +503,9 @@ header nav ul {
 .activite-container {
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     gap: 40px;
-    width: 100%;
     height: 480px;
-    border: transparent;
     margin-bottom: 100px;
 }
 
@@ -533,11 +517,12 @@ header nav ul {
     height: 100%;
     width: 25%;
     gap: 30px;
-    border: transparent;
 }
-#anchor_activite{
-    padding-top:15px ;
+
+#anchor_activite {
+    padding-top: 15px;
 }
+
 .card-1 {
     box-shadow: 4px 4px 3px #e8e6e6;
     transition: 0.3s;
@@ -571,7 +556,11 @@ header nav ul {
     border: 0.5px solid #D9D9D9;
 }
 
- .card-1:hover, .card-2:hover, .card-3:hover,.heb-card:hover,.pop-card:hover{
+.card-1:hover,
+.card-2:hover,
+.card-3:hover,
+.heb-card:hover,
+.pop-card:hover {
     box-shadow: 5px 8px 3px #e8e6e6;
 }
 
@@ -598,25 +587,20 @@ header nav ul {
     height: 100%;
     border-radius: 25px 25px 0px 0px;
     object-fit: cover;
-    object-position: center;
 }
 
 .img-typ-2 img {
-    max-width: 100%;
     width: 100%;
     height: 100%;
     border-radius: 25px 25px 0px 0px;
     object-fit: cover;
-    object-position: center;
 }
 
 .img-typ-3 img {
-    max-width: 100%;
     height: 100%;
     width: 100%;
     border-radius: 25px 25px 0px 0px;
     object-fit: cover;
-    object-position: center;
 }
 
 .leg-typ-1 {
@@ -624,9 +608,8 @@ header nav ul {
     display: flex;
     align-items: center;
     height: 15%;
-    width: 95%;
+    width: 100%;
     padding: 20px;
-    border: transparent;
 }
 
 .leg-typ-2 {
@@ -634,9 +617,8 @@ header nav ul {
     display: flex;
     align-items: center;
     height: 25%;
-    width: 95%;
+    width: 100%;
     padding: 20px;
-    border: transparent;
 }
 
 .leg-typ-3 {
@@ -644,9 +626,8 @@ header nav ul {
     display: flex;
     align-items: center;
     height: 30%;
-    width: 95%;
+    width: 100%;
     padding: 20px;
-    border: transparent;
 }
 
 
@@ -656,7 +637,6 @@ header nav ul {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
-    border: transparent;
     background-color: #F2F2F2;
     padding: 15px;
     padding-left: 25px;
@@ -668,7 +648,6 @@ header nav ul {
 }
 
 .div-footer {
-    border: transparent;
     width: 33%;
 
 }
@@ -681,29 +660,35 @@ header nav ul {
 /*MEDIA QUERY*/
 
 @media screen and (min-width:768px) and (max-width:992px) {
-    h1, h2{
-        font-size: 30px;    
-    }
-    
-    h3{
-    font-size: 25px;
+
+    h1,
+    h2 {
+        font-size: 30px;
     }
 
-    p{
-    font-size: 20px;
+    h3 {
+        font-size: 20px;
     }
 
-    main{
+    .populaire p, .hebergement p{
+        font-size: 18px;
+    }
+
+    main {
         width: 100%;
-        margin: 0;
     }
-    header,#section1,#section2{
+
+    header,
+    #section1,
+    #section2 {
         width: 95%;
-        margin: auto;       
+        margin: auto;
     }
-    header nav ul{
+
+    header nav ul {
         font-size: 19px;
     }
+
     .rechercher {
         display: flex;
         justify-content: center;
@@ -772,7 +757,6 @@ header nav ul {
     }
 
     .populaires {
-        display: block;
         border-radius: 0px;
         width: 95%;
     }
@@ -780,17 +764,6 @@ header nav ul {
     .pop-card {
         height: 250px;
         box-sizing: border-box;
-
-    }
-
-    .pop-image-image {
-        object-fit: cover;
-
-    }
-
-    .populaire {
-        height: fit-content;
-        display: flex;
     }
 
     .hebergements {
@@ -813,6 +786,9 @@ header nav ul {
         height: 300px;
 
     }
+    .heb-image-image{
+        height: 160px;
+    }
 
     .activite-container {
         flex-wrap: wrap;
@@ -824,53 +800,53 @@ header nav ul {
         height: 450px;
     }
 
-    .box-footer {
-        text-align: center;
-    }
-
-
 }
 
 
 @media screen and (max-width:768px) {
-    h1, h2{
-    font-size: 28px;
+
+    h1,
+    h2 {
+        font-size: 28px;
 
     }
-    
-    h3{
-    font-size: 20px;
+
+    h3 {
+        font-size: 20px;
 
     }
-    p{
-    font-size: 18px;
-    
+
+    .populaire p, .hebergement p {
+        font-size: 18px;
+
     }
-    main{
+
+    main {
         width: 100%;
         margin: 0;
     }
-    #section1,#section2{
+
+    #section1,
+    #section2 {
         width: 95%;
-        margin: auto;       
+        margin: auto;
     }
+
     body {
         margin: 0;
-        /* font-weight: 600; */
     }
 
     header {
-        display:block;
+        display: block;
         width: 100%;
-        text-align: center;
         height: fit-content;
-        margin: 0;
     }
 
-    #card-logo{
+    #card-logo {
         width: 50%;
         margin: 0px auto 100px;
     }
+
     #logo {
         margin-bottom: 30px;
         object-fit: contain;
@@ -879,46 +855,45 @@ header nav ul {
 
     }
 
-    header nav{
-        width:100%;
+    header nav { 
         justify-content: center;
-        height: fit-content;
         margin-bottom: 70px;
     }
-
-    header nav ul, li{
-        width: 100%;
+    header nav ul {
+        flex-wrap: wrap;
+        width: 100vw;
     }
+    header nav li{
+        display: flex;
+        min-width: fit-content;
+        text-align: center;
+        width: 50%;
+        flex-wrap: wrap;
+    }
+
 
 
     .button-entete {
         font-weight: 600;
-        justify-content: center;
-        align-items: baseline;
         font-size: 20px;
-        width: 100%;
         margin: 0px;
-        padding: 0px 31% 15px;
+        padding: 0px 20px 10px;
+        width: 100%;
         border-bottom: 3px solid #D9D9D9;
 
     }
 
     .button-entete:hover {
-        color: #0065FC;
         border-top: 0px;
         border-bottom: 3px solid #0065FC;
-        line-height: 18px;
+        line-height: 23px;
     }
-    
-    #section1 h1{
+
+    #section1 h1 {
         margin-top: 50px;
     }
 
     .rechercher {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
         margin-top: 35px;
 
     }
@@ -945,19 +920,19 @@ header nav ul {
     #button-recherche-mob {
         width: 15%;
         visibility: visible;
-        margin-left:-5px ;
+        margin-left: -5px;
 
     }
 
     .filtres {
-        display: flex;
         flex-direction: column;
         margin-bottom: 0;
     }
 
-    .filtres li{
+    .filtres li {
         margin-right: 15px;
     }
+
     .filtres p {
         display: block;
         text-align: left;
@@ -966,18 +941,13 @@ header nav ul {
     }
 
     .filtres ul {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        width: auto;
-        flex-wrap: wrap;
-        height: 250px;
         padding: 0px;
         margin: 0px;
         font-size: 20px;
         font-weight: 600;
     }
-    .information p{
+
+    .information p {
         font-weight: 600;
     }
 
@@ -995,12 +965,13 @@ header nav ul {
     }
 
     .populaires {
-        display:block;
-        width: auto; 
+        display: block;
+        width: auto;
         border-radius: 0px;
         margin: 0px;
     }
-    .populaire{
+
+    .populaire {
         padding: 0;
     }
 
@@ -1009,17 +980,21 @@ header nav ul {
         height: 150px;
         border: 1px solid #D9D9D9;
     }
-    .pop-legende p{
+
+    .pop-legende p {
         margin-bottom: 10px;
     }
-    .pop-legende h3{
+
+    .pop-legende h3 {
         margin-bottom: 0;
     }
-    .pop-legende i{
+
+    .pop-legende i {
         font-size: 15px;
 
     }
-    .pop-legende-note{
+
+    .pop-legende-note {
         width: 115px;
     }
 
@@ -1032,15 +1007,17 @@ header nav ul {
         padding: 0px;
         border-radius: 0px;
     }
-    .heb-legende-note i{
+
+    .heb-legende-note i {
         font-size: 15px;
     }
-    .heb-legende{
+
+    .heb-legende {
         padding: 0px 15px;
     }
-    .note-vide{
-        padding-left: 3px;
-    }
+
+
+
     .heb-footer {
         margin-top: 5px;
     }
@@ -1050,7 +1027,7 @@ header nav ul {
         height: 250px;
         border: 1px solid #D9D9D9;
     }
-    
+
 
     #anchor-activite {
         margin: 25px 0px;
@@ -1064,7 +1041,6 @@ header nav ul {
     .activite {
         display: block;
         width: 100%;
-        height: fit-content;
         margin-bottom: 30px;
     }
 
@@ -1090,8 +1066,6 @@ header nav ul {
     .leg-typ-1,
     .leg-typ-2,
     .leg-typ-3 {
-        display: flex;
-        align-items: center;
         height: 25%;
         padding-left: 15px;
     }
